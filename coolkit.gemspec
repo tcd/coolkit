@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
     "homepage_uri" => spec.homepage,
     "source_code_uri" => spec.homepage,
     "changelog_uri" => "https://github.com/tcd/coolkit/blob/master/CHANGELOG.md",
+    "yard.run" => "yri", # use "yard" to build full HTML docs.
   }
 
   # Specify which files should be added to the gem when it is released.
