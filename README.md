@@ -1,5 +1,9 @@
 # Coolkit
 
+[![Build Status](https://travis-ci.org/tcd/coolkit.svg?branch=master)](https://travis-ci.org/tcd/coolkit)
+[![Coverage Status](https://coveralls.io/repos/github/tcd/coolkit/badge.svg?branch=master)](https://coveralls.io/github/tcd/coolkit?branch=master)
+[![GitHub](https://img.shields.io/github/license/tcd/coolkit)](https://github.com/tcd/coolkit/blob/master/LICENSE.txt)
+
 Useful ruby code with no dependencies.
 
 ## Installation
