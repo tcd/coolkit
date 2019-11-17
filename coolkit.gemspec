@@ -16,7 +16,6 @@ Gem::Specification.new do |spec|
     "homepage_uri" => spec.homepage,
     "source_code_uri" => spec.homepage,
     "changelog_uri" => spec.homepage,
-    # "allowed_push_host" => "TODO: Set to 'http://mygemserver.com'",
   }
 
   # Specify which files should be added to the gem when it is released.
@@ -29,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "codecov"
+  spec.add_development_dependency "coveralls", "~> 0.8.23"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "minitest-focus", "~> 1.1"
   spec.add_development_dependency "minitest-reporters", "~> 1.4"
