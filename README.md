@@ -1,5 +1,6 @@
 # Coolkit
 
+[![Gem](https://img.shields.io/gem/v/coolkit)](https://rubygems.org/gems/coolkit)
 [![Build Status](https://travis-ci.org/tcd/coolkit.svg?branch=master)](https://travis-ci.org/tcd/coolkit)
 [![Coverage Status](https://coveralls.io/repos/github/tcd/coolkit/badge.svg?branch=master)](https://coveralls.io/github/tcd/coolkit?branch=master)
 [![GitHub](https://img.shields.io/github/license/tcd/coolkit)](https://github.com/tcd/coolkit/blob/master/LICENSE.txt)
