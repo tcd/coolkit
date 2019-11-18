@@ -88,9 +88,13 @@ Style/SymbolArray:
 # Unsorted
 # ==============================================================================
 
+# Default value (special_inside_parentheses) is ridiculous.
+# Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstHashElement
 Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
+# Default value (special_inside_parentheses) is ridiculous.
+# Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstArrayElement
 Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
@@ -146,4 +150,3 @@ Metrics/PerceivedComplexity:
 
 Style/CommentedKeyword:
   Enabled: False
-
