@@ -25,10 +25,10 @@ Metrics/LineLength:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-Layout/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
-Layout/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
 Layout/EmptyLinesAroundBlockBody:
