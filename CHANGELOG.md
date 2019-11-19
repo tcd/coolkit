@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## [Unreleased] -->
 
+## 0.2.2 (2019-11-19)
+
+### Changed
+
+- Don't load code in `coolkit.gemspec`.
+    - (When running `bundle exec rake test`, `Coolkit::VERSION` was required before `simplecov`, so version tests were ignored.
+    - Added test to make sure `Coolkit::VERSION` and the version string in `coolkit.gemspec` match.
+
+
 ## 0.2.1 (2019-11-19)
 
 ### Fixed

@@ -1,10 +1,9 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "coolkit/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "coolkit"
-  spec.version       = Coolkit::VERSION
+  spec.version       = "0.2.2"
   spec.authors       = ["Clay Dunston"]
   spec.email         = ["dunstontc@gmail.com"]
 
