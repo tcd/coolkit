@@ -65,6 +65,30 @@ class SymbolizeTest < TestCase
     assert_equal(want, Coolkit.symbolize_keys(input))
   end
 
+  def test_x
+    input = {
+      "name" => "Human",
+      "description" => "This class models a person.",
+      "modules" => ["MilkyWay", "Earth"],
+      "parent" => "Mammal",
+      "attrs" => [
+        { "name" => "Name", "type" => "String" },
+        { "name" => "Age", "description" => "Number of years the human has been alive.", "type" => "Integer", "read_only" => true },
+      ],
+    }
+    want = {
+      name: "Human",
+      description: "This class models a person.",
+      modules: ["MilkyWay", "Earth"],
+      parent: "Mammal",
+      attrs: [
+        { name: "Name", type: "String" },
+        { name: "Age", description: "Number of years the human has been alive.", type: "Integer", read_only: true },
+      ],
+    }
+    assert_equal(want, Coolkit.symbolize_keys(input))
+  end
+
   def test_improper_arguments
     skip()
   end

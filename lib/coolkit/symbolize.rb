@@ -25,7 +25,7 @@ module Coolkit
     elsif arg.is_a?(Array)
       arg.map { |e| symbolize_keys(e) }
     else
-      x
+      arg
     end
   end
 end
