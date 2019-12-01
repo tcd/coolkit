@@ -11,4 +11,12 @@ class FilesystemTest < TestCase
     FileUtils.rm_f(test_file)
   end
 
+  def test_list_files
+    skip()
+  end
+
+  def test_clear_folder
+    skip()
+  end
+
 end

@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Added
+
+- `Coolkit.list_files` - To return an array with the names of all files (not folders) in a given folder.
+- `Coolkit.clean_folder` - To remove all files from a given folder.
 
 ## 0.2.2 (2019-11-19)
 
@@ -14,7 +19,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Don't load code in `coolkit.gemspec`.
     - (When running `bundle exec rake test`, `Coolkit::VERSION` was required before `simplecov`, so version tests were ignored.
     - Added test to make sure `Coolkit::VERSION` and the version string in `coolkit.gemspec` match.
-
 
 ## 0.2.1 (2019-11-19)
 
@@ -40,4 +44,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Array#remove_first` to remove the first *x* from an array.
 - `String#indent` from ActiveSupport. (Because it's excessive to require it for just that)
 - `String#comment` to comment ruby code in strings.
-
