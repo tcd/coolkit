@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `sash`
+
+### Changed
+
+- Update doc comment for `JSON.read`
+
+### Added
+
 - `Coolkit.list_files` - To return an array with the names of all files (not folders) in a given folder.
 - `Coolkit.clean_folder` - To remove all files from a given folder.
 
