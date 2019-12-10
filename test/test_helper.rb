@@ -43,3 +43,30 @@ end
 #   puts " After Suite"
 #   puts "================================================================================"
 # end
+
+module MiniTest::Assertions
+  # `assert_equal` with a default message.
+  # @raise [ArgumentError] unless both arguments are strings
+  # @param want [String] Expected
+  # @param have [String] Actual
+  def assert_equal_and_print(want, have)
+    raise ArgumentError unless want.is_a?(String) && have.is_a?(String)
+
+    clear = "\e[0m"
+    _bold = "\e[1m"
+    red = "\e[31m"
+    green = "\e[32m"
+
+    msg = <<~END
+      #{'=' * 80}
+      expected:
+      #{green + want + clear}
+      actual:
+      #{red + have + clear}
+      #{'=' * 80}
+    END
+
+    # assert_equal(want, have, "#{clear}\n#{'=' * 80}\nEXPECTED:\n\n#{want}\nACTUAL:\n\n#{have}\n#{'=' * 80}\n#{red}")
+    assert_equal(want, have, ("\n" + clear + msg + red))
+  end
+end
