@@ -9,7 +9,7 @@ class String
   #
   # @param amount [Integer] The level of indentation to add.
   # @param indent_string [String] Defaults to tab if a tab is present in the string, and `" "` otherwise.
-  # @param indent_empty_lines [Boolean]
+  # @param indent_empty_lines [Boolean] (false)
   #
   # @return [void]
   def indent!(amount, indent_string = nil, indent_empty_lines = false)
@@ -32,7 +32,7 @@ class String
   #
   # @param amount [Integer] The level of indentation to add.
   # @param indent_string [String] Defaults to tab if a tab is present in the string, and `" "` otherwise.
-  # @param indent_empty_lines [Boolean]
+  # @param indent_empty_lines [Boolean] (false)
   #
   # @return [String]
   def indent(amount, indent_string = nil, indent_empty_lines = false)

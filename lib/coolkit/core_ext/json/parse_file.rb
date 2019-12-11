@@ -1,3 +1,6 @@
+require "json"
+require "yaml"
+
 module JSON
   # Parse JSON data from a file at the given path.
   #
@@ -7,7 +10,7 @@ module JSON
   # @param opts [Hash] Options to pass to [`JSON.parse`](https://ruby-doc.org/stdlib-2.6.3/libdoc/json/rdoc/JSON.html#method-i-parse).
   # @param (see #parse)
   # @return [Hash]
-  def self.read(path, opts = {})
-    return self.parse(File.read(path), opts)
+  def self.parse_file(path, opts = {})
+    return self.parse(File.read(File.expand_path(path)), opts)
   end
 end

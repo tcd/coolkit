@@ -7,19 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.3.0 (2019-12-10)
+
 ### Added
 
-- `sash`
 - `String.trim_trailing_whitespace`
+- `Coolkit.list_files` - To return an array with the names of all files (not folders) in a given folder.
+- `Coolkit.clean_folder` - To remove all files from a given folder.
 
 ### Changed
 
-- Update doc comment for `JSON.read`
-
-### Added
-
-- `Coolkit.list_files` - To return an array with the names of all files (not folders) in a given folder.
-- `Coolkit.clean_folder` - To remove all files from a given folder.
+- Renamed `JSON.read` to `JSON.parse_file`.
+- Refactor code, require explicit `require` statements for monkey-patched methods:
+    - `Array.remove_first` (`require "coolkit/core_ext/array/remove_first"`)
+    - `JSON.parse_file` (`require "coolkit/core_ext/json/parse_file"`)
+    - `String.comment` (`require "coolkit/core_ext/string/comment"`)
+    - `String.indent` (`require "coolkit/core_ext/string/indent"`)
 
 ## 0.2.2 (2019-11-19)
 

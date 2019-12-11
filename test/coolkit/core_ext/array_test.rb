@@ -1,4 +1,5 @@
 require "test_helper"
+require "coolkit/core_ext/array/remove_first"
 
 class ArrayTest < TestCase
 

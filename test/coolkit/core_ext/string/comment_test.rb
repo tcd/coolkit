@@ -1,4 +1,5 @@
 require "test_helper"
+require "coolkit/core_ext/string/comment"
 
 class CommentTest < TestCase
 

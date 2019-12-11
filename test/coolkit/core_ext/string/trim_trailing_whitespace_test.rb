@@ -1,4 +1,5 @@
 require "test_helper"
+require "coolkit/core_ext/string/trim_trailing_whitespace"
 
 class TrimTrailingWhitespaceTest < TestCase
 
