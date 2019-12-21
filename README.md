@@ -10,28 +10,21 @@ Useful ruby code with no dependencies.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add `gem "coolkit"` to your application's Gemfile and then run `bundle`.
 
-```ruby
-gem "coolkit"
-```
-
-And then execute:
-
-```shell
-bundle
-```
-
-Or install it yourself as:
-
-```
-gem install util
-```
+Or install it yourself as `gem install coolkit`
 
 ## Usage
 
+If you want to use one of the core extensions, it needs to be required explicitly.
+This allows users to make use of `coolkit`'s general functions without monkeypatching the standard library.
+
 ```ruby
 require "coolkit"
+
+hash = {"key" => [{"k" => :v}, {"k" => 5}]}
+Coolkit.symbolize_keys(hash) #=> {:key => [{:k => :v}, {:k => 5}]}
+
 ```
 
 ### Contributing

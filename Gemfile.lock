@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coolkit (0.2.2)
+    coolkit (0.3.0)
 
 GEM
   remote: https://rubygems.org/

@@ -7,22 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.4.0 (2019-12-21) [Unreleased]
+
+### Added
+
+- `String#normalize!` / `String#normalize` to remove non-letter characters from a string.
+- `String#snake_case` / `String#snake_case` to convert a string to snake_case.
+- `String#pascal_case` / `String#pascal_case` to convert a string to PascalCase.
+
+### Changed
+
+- Updated readme.
+- Fixed method notation in changelog.
+- Added namespaces to tests.
+
+
 ## 0.3.0 (2019-12-10)
 
 ### Added
 
-- `String.trim_trailing_whitespace`
-- `Coolkit.list_files` - To return an array with the names of all files (not folders) in a given folder.
-- `Coolkit.clean_folder` - To remove all files from a given folder.
+- `String#trim_trailing_whitespace!` / `Stringt#rim_trailing_whitespace` to remove trailing spaces following all newlines in a string.
+- `Coolkit.list_files` to return an array with the names of all files (not folders) in a given folder.
+- `Coolkit.clean_folder` to remove all files from a given folder.
 
 ### Changed
 
 - Renamed `JSON.read` to `JSON.parse_file`.
 - Refactor code, require explicit `require` statements for monkey-patched methods:
-    - `Array.remove_first` (`require "coolkit/core_ext/array/remove_first"`)
+    - `Array#remove_first!` / `Array#remove_first` (`require "coolkit/core_ext/array/remove_first"`)
     - `JSON.parse_file` (`require "coolkit/core_ext/json/parse_file"`)
-    - `String.comment` (`require "coolkit/core_ext/string/comment"`)
-    - `String.indent` (`require "coolkit/core_ext/string/indent"`)
+    - `String#comment!` / `String#comment` (`require "coolkit/core_ext/string/comment"`)
+    - `String#indent!` / `String#indent` (`require "coolkit/core_ext/string/indent"`)
 
 ## 0.2.2 (2019-11-19)
 
@@ -49,10 +64,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `Coolkit::Error` and `Coolkit::VERSION`.
-- `root_dir`, `data_dir`, `data_dir` for finding your way without `Rails.root`
-- `symbolize_keys` to get by without .
-- `to_est` to convert UCT time to EST.
-- `write_to_file` to write to a given path and not worry if parent folders exist yet.
-- `Array#remove_first` to remove the first *x* from an array.
-- `String#indent` from ActiveSupport. (Because it's excessive to require it for just that)
-- `String#comment` to comment ruby code in strings.
+- `Coolkit.root_dir`, `Coolkit.data_dir`, `Coolkit.data_dir` for finding your way without `Rails.root`
+- `Coolkit.symbolize_keys` to get by without .
+- `Coolkit.to_est` to convert UCT time to EST.
+- `Coolkit.write_to_file` to write to a given path and not worry if parent folders exist yet.
+- `Array#remove_first!` / `Array#remove_first` to remove the first *x* from an array.
+- `String#indent!` / `String#indent` from ActiveSupport. (Because it's excessive to require it for just that)
+- `String#comment!` / `String#comment` to comment ruby code in strings.

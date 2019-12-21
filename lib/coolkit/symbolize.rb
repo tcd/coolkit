@@ -2,8 +2,14 @@ module Coolkit
   # Recursively convert keys in a Hash or Array to symbols.
   #
   # See:
+  #
   # - [original code](https://avdi.codes/recursively-symbolize-keys/)
   # - [array support](https://gist.github.com/neektza/8585746)
+  #
+  # @example
+  #
+  #   hash = {"key" => [{"k" => :v}, {"k" => 5}]}
+  #   Coolkit.symbolize_keys(hash) #=> {:key => [{:k => :v}, {:k => 5}]}
   #
   # @param arg [Hash,Array]
   # @return [Hash,Array]
