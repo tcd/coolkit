@@ -35,7 +35,7 @@ Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
 # https://unix.stackexchange.com/a/18789
-Layout/TrailingBlankLines:
+Layout/TrailingEmptyLines:
   EnforcedStyle: final_newline
 
 # ==============================================================================
@@ -90,12 +90,12 @@ Style/SymbolArray:
 
 # Default value (special_inside_parentheses) is ridiculous.
 # Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstHashElement
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 # Default value (special_inside_parentheses) is ridiculous.
 # Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstArrayElement
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
 Style/TrailingCommaInArguments:
@@ -124,7 +124,7 @@ Style/SafeNavigation:
 Style/ConditionalAssignment:
   Enabled: false
 
-Lint/HandleExceptions:
+Lint/SuppressedException:
   AllowComments: true
 
 Metrics/ModuleLength:
