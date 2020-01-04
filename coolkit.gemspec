@@ -11,6 +11,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/tcd/coolkit"
   spec.license       = "MIT"
 
+  spec.required_ruby_version = ">= 2.3.0"
+
   spec.metadata = {
     "homepage_uri" => spec.homepage,
     "source_code_uri" => spec.homepage,
