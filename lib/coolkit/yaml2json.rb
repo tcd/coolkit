@@ -6,6 +6,7 @@ module Coolkit
   #
   #
   # @param path [String]
+  # @param pretty [Boolean] (true)
   # @return [String]
   def self.yaml2json(path, pretty: true)
     path = File.expand_path(path)
