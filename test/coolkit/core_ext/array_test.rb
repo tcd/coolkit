@@ -76,7 +76,7 @@ module CoreExtTest
       cases = self.cases()
       cases.each do |c|
         want = c[:result]
-        original = c[:array]
+        # original = c[:array]
         have = c[:array].remove_first(c[:item])
         # refute_equal(original, have)
         assert_equal(want, have)
