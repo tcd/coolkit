@@ -61,8 +61,10 @@ Style/ZeroLengthPredicate:
 Style/NumericPredicate:
   Enabled: false
 
+# preferably `EnforcedStyle: snake_case`, but it varies.
 Naming/VariableNumber:
-  EnforcedStyle: snake_case
+  Enabled: false
+
 
 # ==============================================================================
 # Braces, Brackets, & Parens
