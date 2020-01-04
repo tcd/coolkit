@@ -1,6 +1,8 @@
 require "pathname"
 
 module Coolkit
+  # Not sure how I want this to work yet.
+  #
   # See:
   #
   # - [Pathname](https://ruby-doc.org/stdlib-2.6.3/libdoc/pathname/rdoc/Pathname.html)
@@ -12,6 +14,6 @@ module Coolkit
     # /^\.\w+$/
     # /\A\.\w+\z/
     return "" if file.match(/\.\z/)
-    return "." + file.split(".")[1..].join(".")
+    return "." + file.split(".")[1..-1].join(".")
   end
 end
