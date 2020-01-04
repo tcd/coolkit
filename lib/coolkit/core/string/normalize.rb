@@ -15,7 +15,7 @@ module Coolkit
   #
   # @param string [String]
   # @return [String]
-  def self.normalize_string(string)
+  def self.normalize(string)
     return string.dup.tap { |s| normalize!(s) }
   end
 

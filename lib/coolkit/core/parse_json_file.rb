@@ -10,6 +10,6 @@ module Coolkit
   # @param (see #parse)
   # @return [Hash]
   def self.parse_json_file(path, opts = {})
-    return JSON.parse(File.read(File.expand_path(path)), **opts)
+    return JSON.parse(File.read(File.expand_path(path)), opts)
   end
 end

@@ -11,6 +11,10 @@ Style/DocumentationMethod:
   Exclude:
     - 'test/**/*.rb'
 
+Layout/HashAlignment:
+  Exclude:
+    - 'test/**/*.rb'
+
 # Don't leave calls to pry lying around.
 Lint/Debugger:
   Enabled: true
@@ -64,7 +68,6 @@ Style/NumericPredicate:
 # preferably `EnforcedStyle: snake_case`, but it varies.
 Naming/VariableNumber:
   Enabled: false
-
 
 # ==============================================================================
 # Braces, Brackets, & Parens

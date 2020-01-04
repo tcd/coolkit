@@ -17,7 +17,7 @@ module Coolkit
   # @param indent_empty_lines [Boolean] (true)
   # @return [String]
   def self.comment(string, indent_empty_lines: true)
-    return string.dup.tap { |s| comment!(s, indent_empty_lines) }
+    return string.dup.tap { |s| comment!(s, indent_empty_lines: indent_empty_lines) }
   end
 
 end
