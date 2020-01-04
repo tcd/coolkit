@@ -1,4 +1,5 @@
 require "test_helper"
+require "coolkit/scratch/duplicate_strings.rb"
 
 # https://stackoverflow.com/a/31354262/7687024
 CAPS = ("AAA".."ZZZ").to_a.first(10_000)
