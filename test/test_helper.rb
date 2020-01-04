@@ -10,8 +10,13 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(formatters)
 SimpleCov.start do
   add_filter "/bin/"
   add_filter "/test/"
+  add_filter "/lib/coolkit/wip"
 
-  track_files "lib/**/*.rb"
+  add_group "Core Extensions", "lib/coolkit/core_ext"
+  add_group "Core", "lib/coolkit/core"
+  add_group "fmt", "lib/coolkit/fmt"
+
+  # track_files "lib/**/*.rb"
 end
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
