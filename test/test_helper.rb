@@ -16,6 +16,7 @@ end
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "coolkit"
+require "pry"
 
 require "minitest/autorun"
 require "minitest/focus"
@@ -24,15 +25,6 @@ Minitest::Reporters.use!([
   # Minitest::Reporters::DefaultReporter.new(color: true),
   Minitest::Reporters::SpecReporter.new,
 ])
-
-class TestCase < Minitest::Test
-  # Return path for a file used in tests.
-  #
-  # @param path [String]
-  def file_fixture(path)
-    return File.expand_path(File.join(File.dirname(__dir__), "test", "fixtures", "files", path))
-  end
-end
 
 # puts "================================================================================"
 # puts " Before Suite"
@@ -69,4 +61,40 @@ module MiniTest::Assertions
     # assert_equal(want, have, "#{clear}\n#{'=' * 80}\nEXPECTED:\n\n#{want}\nACTUAL:\n\n#{have}\n#{'=' * 80}\n#{red}")
     assert_equal(want, have, ("\n" + clear + msg + red))
   end
+end
+
+class TestCase < Minitest::Test
+  # Return path for a file used in tests.
+  #
+  # @param path [String]
+  def file_fixture(path)
+    return File.expand_path(File.join(File.dirname(__dir__), "test", "fixtures", "files", path))
+  end
+
+  unless defined?(Spec)
+    # Helper to define a test method using a String.
+    # Under the hood, it replaces spaces with underscores and defines the test method.
+    # [Courtesy of ActiveSupport](https://github.com/rails/rails/blob/master/activesupport/lib/active_support/testing/declarative.rb).
+    #
+    # @example
+    #   test "verify something" do
+    #     ...
+    #   end
+    #
+    # @param name [String]
+    # @return [void]
+    def self.test(name, &block)
+      test_name = "test_#{name.gsub(/\s+/, '_')}".to_sym
+      defined = method_defined?(test_name)
+      raise "#{test_name} is already defined in #{self}" if defined
+      if block_given?
+        define_method(test_name, &block)
+      else
+        define_method(test_name) do
+          flunk "No implementation provided for #{name}"
+        end
+      end
+    end
+  end
+
 end
