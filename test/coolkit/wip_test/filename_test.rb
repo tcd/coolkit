@@ -1,4 +1,5 @@
 require "test_helper"
+require "coolkit/wip/filename"
 
 module FilesystemTest
   class FileNameTest < TestCase
