@@ -24,7 +24,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    rake (10.5.0)
+    rake (12.3.3)
     ruby-progressbar (1.10.1)
     simplecov (0.16.1)
       docile (~> 1.1)
@@ -46,7 +46,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   minitest-focus (~> 1.1)
   minitest-reporters (~> 1.4)
-  rake (~> 10.0)
+  rake (~> 12.3)
   simplecov
 
 BUNDLED WITH
