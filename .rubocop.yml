@@ -154,4 +154,7 @@ Metrics/PerceivedComplexity:
   Enabled: false
 
 Style/CommentedKeyword:
-  Enabled: False
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
