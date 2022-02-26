@@ -48,7 +48,10 @@ module Coolkit
   # @return [Integer]
   def self.clean_folder(path)
     dir = File.expand_path(path)
-    children = Dir.entries(dir).select { |f| File.file?(File.join(dir, f)) }
+    children = Dir.entries(dir).select do |f|
+      file = File.join(dir, f)
+      File.file?(file)
+    end
     deleted = File.unlink(*children)
     return deleted
   end

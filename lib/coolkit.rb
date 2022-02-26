@@ -4,5 +4,5 @@ module Coolkit
 end
 
 Dir.glob(File.join(__dir__, "coolkit", "*.rb")).sort.each { |file| require file }
-Dir.glob(File.join(__dir__, "coolkit", "fs", "*.rb")).sort.each { |file| require file }
+Dir.glob(File.join(__dir__, "coolkit", "fs", "**", "*.rb")).sort.each { |file| require file }
 Dir.glob(File.join(__dir__, "coolkit", "fmt", "*.rb")).sort.each { |file| require file }

@@ -15,6 +15,7 @@ SimpleCov.start do
   add_group "Core Extensions", "lib/coolkit/core_ext"
   add_group "Core", "lib/coolkit/core"
   add_group "fmt", "lib/coolkit/fmt"
+  add_group "fs", "lib/coolkit/fs"
 
   # track_files "lib/**/*.rb"
 end

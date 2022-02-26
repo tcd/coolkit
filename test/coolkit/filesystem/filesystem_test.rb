@@ -5,8 +5,15 @@ require "time"
 require "tmpdir"
 require "pathname"
 
+# Execute code in a given block with the following temporary folder structure provided:
+#
+#   test_fs/
+#   └── file
+#
+# @yieldparam [Pathname] root_folder
+# @return [void]
 def with_test_file(&_block)
-  root_dir = Pathname.new(Dir.mktmpdir("minitestfs"))
+  root_dir = Pathname.new(Dir.mktmpdir("test_fs"))
   file = root_dir + "file"
   FileUtils.touch(file)
   yield(file) if block_given?
