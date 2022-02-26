@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `Coolkit.full_extension`
 - `Coolkit.yaml2json` for converting YAML files to JSON. Handy for writing JSON schema files in YAML.
 - Assorted methods for finding duplicates in string arrays.
+
+### Changed
+
+- Moved WIP code to a WIP folder that isn't required by default.
+- Added non-monkeypatched versions of all core extensions.
 
 ## 0.4.0 (no release)
 
