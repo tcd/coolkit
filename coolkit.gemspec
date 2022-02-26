@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("minitest-focus", "~> 1.1")
   spec.add_development_dependency("minitest-reporters", "~> 1.4")
   spec.add_development_dependency("pry", "~> 0.14.1")
-  spec.add_development_dependency("rake", "~> 10.0")
+  spec.add_development_dependency("rake", "~> 12.3")
   spec.add_development_dependency("simplecov")
   spec.add_development_dependency("solargraph", "~> 0.38.0")
   spec.add_development_dependency("yard", "~> 0.9.27")
