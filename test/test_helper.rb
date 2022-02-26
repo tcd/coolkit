@@ -79,6 +79,7 @@ class TestCase < Minitest::Test
   unless defined?(Spec)
     # Helper to define a test method using a String.
     # Under the hood, it replaces spaces with underscores and defines the test method.
+    #
     # [Courtesy of ActiveSupport](https://github.com/rails/rails/blob/master/activesupport/lib/active_support/testing/declarative.rb).
     #
     # @example
@@ -96,7 +97,7 @@ class TestCase < Minitest::Test
         define_method(test_name, &block)
       else
         define_method(test_name) do
-          flunk "No implementation provided for #{name}"
+          flunk("No implementation provided for #{name}")
         end
       end
     end
